@@ -1,0 +1,27 @@
+body{
+    padding-top: 7rem;
+    padding-left: 30rem;
+    box-sizing: border-box;
+}
+.main{
+    flex-grow: 1;
+    height: 1000px;
+    padding: 5rem 6.15% 6.5rem 6.15%; 
+    box-sizing: border-box;
+}
+
+
+.step-section{
+    display: flex; 
+    gap: 2rem;
+    max-width: 1022px;
+    margin: 0 auto;
+}
+.step-box{
+    width: 66.5%;
+}
+.step-road{
+    width: 33.5%;
+    max-width: 32.5rem;
+    // padding-left: 2rem;
+}
