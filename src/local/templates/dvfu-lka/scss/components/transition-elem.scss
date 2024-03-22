@@ -1,0 +1,39 @@
+.transition-elem{
+    display: flex;
+    align-items: center;
+    padding: 1.6rem;
+    border-radius: 4px;
+    background-color: var(--purple);
+    gap: 1.2;
+    font-size: 1.4rem;
+    line-height: 1.28;
+    color: var(--light);
+    box-sizing: border-box;
+    .transition-elem__link{
+        flex-shrink: 0;
+        position: relative;
+        width: 3.6rem;
+        height: 3.6rem;
+        border-radius: 4px;
+        background-color: var(--dark-purple);
+        transition: var(--great-transition);
+        &::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2rem;
+            height: 2rem;
+            background-color: var(--light);
+            mask-image: url(../img/icons/long-arrow.svg);
+            transform: translate(-50%, -50%);
+            transition: var(--great-transition);
+        }
+        &:hover{
+            background-color: var(--light);
+            &::before{
+                background-color: var(--dark-purple);
+            }
+        }
+    }
+}

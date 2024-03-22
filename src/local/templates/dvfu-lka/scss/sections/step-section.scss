@@ -1,0 +1,23 @@
+
+.step-section{
+    display: flex; 
+    gap: 2rem;
+    max-width: 1022px;
+    margin: 0 auto;
+}
+
+
+.step-section__left-col{
+    width: 66.5%;
+}
+.step-section__right-col{
+    width: 33.5%;
+    max-width: 32.5rem; 
+    .transition-elem{
+        margin-top: 2.4rem;
+    }
+}
+
+
+
+

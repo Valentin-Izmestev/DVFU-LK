@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Title here</title>
+
+	<!--   Cascading Style Sheets-->
+	<!-- <link rel="stylesheet" href="css/style.css">  -->
+	<link rel="stylesheet" href="./local/templates/dvfu-lka/css/style.min.css">
+	<noscript>
+		<style>
+			.content-wrapper {
+				overflow: auto;
+			}
+		</style>
+	</noscript>
+</head>
+
+<body>
+
+	<header id="header">
+     <div class="inner">
+        <a href="#" class="logo">
+            <img src="./local/templates/dvfu-lka/img/logo.svg" alt="">
+         </a>
+        <h1 class="lka-title">
+            Личный кабинет абитуриента
+        </h1>
+        <div class="dvfu-clock">
+            <span class="dvfu-clock__icon"></span>
+            17:18
+            <div class="dvfu-clock-pop-up">
+                <span class="dvfu-clock-pop-up__caption title">Время во Владивостоке</span>
+                <p>
+                    Приёмная комиссия работает по местному времени, имейте это в виду во время подачи документов или обращения в техподдержку.
+                </p>
+            </div>
+        </div>
+        <div class="lang-select-box">
+            <div class="lang-select">
+                <div class="lang-select-item">
+                    <span class="lang-select-item__flag lang-select-item__flag--russian"></span>
+                    <span class="lang-select-item__caption">RU</span>
+                </div>
+                <span class="lang-select__arrow"></span>
+                <div class="lang-select__list">
+                    <a href="#" class="lang-select-item">
+                        <span class="lang-select-item__flag lang-select-item__flag--china"></span>
+                        <span class="lang-select-item__caption">CH</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header-user-box">
+            <span class="header-user-box__avatar"></span>
+            <span class="header-user-box__login" title="Konstantinopolskii@mail.ru">Konstantinopolskii@mail.ru</span>
+            <span class="header-user-box__arrow"></span>
+            <ul class="header-user-menu">
+                <li>
+                    <a href="#">Настройки</a>
+                </li>
+                <li>
+                    <a href="#">Какой-то пункт</a>
+                </li>
+                <li>
+                    <a href="#">Какой-то пункт</a>
+                </li>
+                <li>
+                    <a href="#">Выйти</a>
+                </li>
+            </ul>
+        </div>
+     </div>
+     <div class="header-menu-box">
+        <div class="menu-container simplebar">
+            <button class="sh-header-menu-box-btn">
+                <span class="sh-header-menu-box-btn__icon"></span>
+                Свернуть меню
+            </button>
+            <menu class="main-menu"> 
+                <li>
+                    <a href="#">
+                        <span class="main-menu__icon main-menu__icon--home"></span>
+                        <b>Главная</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="active">
+                        <span class="main-menu__icon main-menu__icon--student"></span>
+                        Подать документы
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="main-menu__icon main-menu__icon--award"></span>
+                        Результаты экзаменов
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="main-menu__icon main-menu__icon--people"></span>
+                        Списки абитуриентов
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="main-menu__icon main-menu__icon--bookmark"></span>
+                        Сводки о конкурсе
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="main-menu__icon main-menu__icon--task"></span>
+                        Конкурсные списки
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="main-menu__icon main-menu__icon--book"></span>
+                        Приказы о зачислении
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="main-menu__icon main-menu__icon--folder"></span>
+                        Статистика прошлых лет
+                    </a>
+                </li>
+            </menu>
+        </div>
+        <div class="header-menu-box-footer">
+            <span class="header-menu-box-footer__caption">
+                Нужна помощь?
+            </span>
+            <button class="btn">Написать в чат</button>
+        </div>
+     </div>
+</header>
+	<main class="main">
+		<div class="step-section">
+			<div class="step-box step-section__left-col">
+				<form class="step-form">
+					<div class="step-form__header">
+						<div class="step__number ">Шаг 2</div>
+						<h2>Паспортные данные</h2>
+						<p>
+							Заполните Ваши персональные данные, укажите контактную
+							информацию
+						</p>
+						<p>
+							Заполните Ваши персональные данные, укажите контактную
+							информацию
+						</p>
+						<div class="decor-line"></div>
+					</div>
+					<div class="step-form__field-box">
+						<div class="columns-box columns-box--two-col">
+							<div class="form-elem__choices">
+								<span>Выберите пол</span>
+								<select name="gender" class="select-ch select-ch--no-search">
+									<option value="мужской">Мужской</option>
+									<option value="женский">Женский</option>
+								</select>
+							</div>
+							<div class="form-elem__choices">
+								<span>Выберите пол</span>
+								<select name="gender" class="select-ch">
+									<option>Мужской</option>
+									<option>Женский</option>
+								</select>
+							</div>
+						</div>
+						<label class="form-elem">
+							<span class="form-elem__caption req__caption">Мобильный телефон</span>
+							<input type="text" name="phone" class="form-elem__field tel-mask">
+							<span class="form-elem__error-message"></span>
+						</label>
+						<label class="form-elem">
+							<span class="form-elem__caption"> Фамилия </span>
+							<input type="text" name="name1" class="form-elem__field" disabled placeholder="Константинопольский" />
+							<span class="form-elem__error-message"></span>
+						</label>
+						<label class="form-elem">
+							<span class="form-elem__caption"> Имя </span>
+							<input type="text" name="name1" class="form-elem__field" disabled placeholder="Константин" />
+							<span class="form-elem__error-message"></span>
+						</label>
+						<label class="form-elem">
+							<span class="form-elem__caption"> Отчество (если есть) </span>
+							<input type="text" name="surname" class="form-elem__field" required="required" placeholder="" />
+							<span class="form-elem__error-message"></span>
+						</label>
+						<div class="columns-box columns-box--two-col d-flex">
+							<div class="form-elem__choices">
+								<span>Выберите пол</span>
+								<select id="select-ch" class="   npa-choices--no-search">
+									<option>Мужской</option>
+									<option>Женский</option>
+								</select>
+							</div>
+
+							<label class="form-elem">
+								<span class="form-elem__caption req__caption">Дата рождения</span>
+								<input type="text" name="calendar" class="form-elem__field" data-input id="myID" />
+								<a class="input-button" title="toggle" data-toggle>
+									<i class="icon-calendar">
+										<img src="local/templates/dvfu-lka/image/icon-calendar.svg" />
+									</i>
+								</a>
+
+								<span class="form-elem__error-message"></span>
+							</label>
+						</div>
+						<label class="form-elem">
+							<span class="form-elem__caption req__caption">
+								Место рождения</span>
+							<input type="text" name="natalplace" class="form-elem__field" required="required" placeholder="" />
+							<div class="element-tooltip">
+								<img src="local/templates/dvfu-lka/image/icon-question.svg" />
+								<span class="tooltip__text">Как в паспорте</span>
+								<span class="form-elem__error-message"></span>
+							</div>
+						</label>
+						<div class="columns-box columns-box--two-col d-flex">
+							<label class="form-elem">
+								<span class="form-elem__caption req__caption">Мобильный телефон</span>
+								<input type="text" name="phone" class="form-elem__field tel-mask" required="required" />
+								<span class="form-elem__error-message"></span>
+							</label>
+							<label class="form-elem">
+								<span class="form-elem__caption">Дополнительный телефон</span>
+								<input type="text" name="phone2" class="form-elem__field tel-mask" required="required" />
+								<span class="form-elem__error-message"></span>
+							</label>
+						</div>
+						<label class="form-elem">
+							<span class="form-elem__caption">E-mail</span>
+							<input type="email" name="email" class="form-elem__field" disabled placeholder="Konstantinopolskii@mail.ru" />
+							<span class="form-elem__error-message"></span>
+						</label>
+					</div>
+
+					<div class="step-box-question">
+						<div class="decor-line"></div>
+						<span class="h3">
+							Нуждаетесь ли вы в общежитии?
+						</span>
+						<label class="form-checkbox">
+							<input type="checkbox" name="check1" value="value-1">
+							<i></i>
+							<span class="form-checkbox__caption">Да, нуждаюсь</span>
+						</label>
+						<div class="decor-line"></div>
+					</div>
+					
+
+					<div class="form-elem__choices">
+						<span>Выберите пол</span>
+						<select name="gender" class="select-ch select-ch--no-search">
+							<option value="мужской">Мужской</option>
+							<option value="женский">Женский</option>
+						</select>
+					</div>
+
+					<div class="columns-box columns-box--two-col d-flex">
+
+						<div class="form-elem__choices">
+							<span>Выберите пол</span>
+							<select id="" class="select-ch2">
+								<option>Мужской</option>
+								<option>Женский</option>
+							</select>
+						</div>
+					</div>
+					<!-- <label class="form-elem">
+						<span class="form-elem__caption req__caption">Мобильный телефон</span>
+						<input type="text" name="phone" class="form-elem__field" required="required" placeholder="" id="tel-mask" />
+						<span class="form-elem__error-message"></span>
+					</label> -->
+				</form>
+			</div>
+			<div class="step-section__right-col">
+				<ul class="step-road">
+					<li>
+						<a href="#" class="step-road-link step-road-link--completed">
+							<span class="step-road-link__number">1.<sup>*</sup></span>
+							<span class="step-road-link__caption">
+								Анкетные данные
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="step-road-link step-road-link--currnet">
+							<span class="step-road-link__number">2.<sup>*</sup></span>
+							<span class="step-road-link__caption">
+								Паспортные данные
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="step-road-link">
+							<span class="step-road-link__number">3.</span>
+							<span class="step-road-link__caption">
+								Законный представитель
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="step-road-link">
+							<span class="step-road-link__number">4.<sup>*</sup></span>
+							<span class="step-road-link__caption">
+								Документ об образовании
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="step-road-link">
+							<span class="step-road-link__number">5.</span>
+							<span class="step-road-link__caption">
+								Результаты ЕГЭ
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="step-road-link">
+							<span class="step-road-link__number">6.</span>
+							<span class="step-road-link__caption">
+								Сведения о льготах
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="step-road-link">
+							<span class="step-road-link__number">7.</span>
+							<span class="step-road-link__caption">
+								Сведения о договоре на целевое обучение
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="step-road-link">
+							<span class="step-road-link__number">8.<sup>*</sup></span>
+							<span class="step-road-link__caption">
+								Личное дело
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="step-road-link">
+							<span class="step-road-link__number">9.<sup>*</sup></span>
+							<span class="step-road-link__caption">
+								Приоритеты
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="step-road-link">
+							<span class="step-road-link__number">10.</span>
+							<span class="step-road-link__caption">
+								Индивидуальные достижения
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="step-road-link">
+							<span class="step-road-link__number">11.</span>
+							<span class="step-road-link__caption">
+								Сведения о дипломах олимпиад
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="step-road-link">
+							<span class="step-road-link__number">12.</span>
+							<span class="step-road-link__caption">
+								Применение льготы "Без экзаменов"
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="step-road-link">
+							<span class="step-road-link__number">13.</span>
+							<span class="step-road-link__caption">
+								Вступительные испытания
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="step-road-link">
+							<span class="step-road-link__number">14.</span>
+							<span class="step-road-link__caption">
+								Портфолио
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="step-road-link">
+							<span class="step-road-link__number">15.</span>
+							<span class="step-road-link__caption">
+								Печать документов
+							</span>
+						</a>
+					</li>
+				</ul>
+				<div class="transition-elem">
+					Перейти к расстановке приоритетов образовательных программ
+					<a href="#" class="transition-elem__link"></a>
+				</div>
+			</div>
+
+		</div>
+	</main>
+	<div class="great-shadow"></div>
+	<!-- ++++++++++JavaScript++++++++++-->
+	<!-- <script type="text/javascript" src="js/jquery-1.12.1.js"></script> -->
+	<!-- <script type="text/javascript" src="./local/templates/lka/js/script.min.js"></script> -->
+	<script src="./local/templates/dvfu-lka/js/script.js"></script>
+	<!-- ++++++++++JavaScript end++++++++++-->
+</body>
+
+</html>

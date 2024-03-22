@@ -1,0 +1,68 @@
+.step-road-link{
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 5rem;
+    border-radius: 4px;
+    background-color: var(--light);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+    .step-road-link__number{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 5rem;
+        padding: 1rem 1rem;
+        align-self: stretch; 
+        border-right: 1px solid var(--bg-elem);
+        text-align: center;
+        font-size: 1.4rem;
+        line-height: 1.24;
+        font-weight: 500;
+        font-family: var(--title-font);
+        color: var(--dark-grey);
+        transition: var(--great-transition);
+        box-sizing: border-box;
+        sup{
+            position: absolute;
+            top: 11px;
+            right: 6px;
+            color: var(--red);
+        }
+    }
+    .step-road-link__caption{
+        padding: 1rem 1.6rem; 
+        font-size: 1.5rem;
+        line-height: 1.17;
+        color: var(--dark-grey);
+        box-sizing: border-box;
+    }
+    &:hover{
+        text-decoration: none;
+    }
+    &--completed,
+    &--currnet{
+        .step-road-link__number{
+            color: var(--light);
+            sup{
+                color: var(--light);
+            }
+        }
+        .step-road-link__caption{
+            color: var(--black);
+        }
+    }
+    &--completed{
+        .step-road-link__number{
+            background-color: var(--completed);
+            border-right: 1px solid var(--completed);
+        }
+    }
+    &--currnet{
+        .step-road-link__number{
+            background-color: var(--soft-blue);
+            border-right: 1px solid var(--soft-blue);
+        }
+    }
+}

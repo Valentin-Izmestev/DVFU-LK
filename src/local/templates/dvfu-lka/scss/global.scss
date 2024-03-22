@@ -19,10 +19,12 @@ html{
     --black: #000000;
     --light: #FFFFFF;
     --main-blue: #0067B1;
+    --blue: #74B2E2;
     --soft-blue: #0096D6;
     --light-blue: #D4EFFC;
     --green: #009D75;
     --soft-green: #67C18A;
+    --completed: #69C28B;
     --khaki: #49842B;
     --aquamarin: #01B8BC;
     --bg: #EFF9FE;
@@ -33,9 +35,12 @@ html{
     --bg-elem: #F0F3F9;
     --hover-menu: rgba(0, 103, 177, 0.1);
     --orange: #F3712C;
+    --purple: #7E79B9;
+    --dark-purple: #706BAB;
     --soft-btn-blue: #F2F9FD;
     --blue-btn-text: #9BB6BC;
 
+    --great-transition: all 200ms ease;
 }
  
 body{ 
@@ -49,6 +54,7 @@ body{
     min-height:100vh;   
     color: var(--black); 
     font-size: 1.6rem;
+    line-height: 1.4;
     font-weight: 400;
     font-family: var(--common-font);
 }
@@ -69,7 +75,7 @@ input, textarea, button, a{
 
 table{border-spacing:0; border-collapse: collapse; margin: 0; padding: 0;}
 td, th{vertical-align:top; word-wrap:break-word;}
-ul, ol, nav, dl{margin:0; padding:0; list-style:none;}
+ul, ol, nav, dl{margin:0; padding:0; }
 a{text-decoration:none; font-size: inherit; line-height: inherit; /*color: var(--blue);*/ font-weight: inherit}
 a:hover{text-decoration:underline;}
 button{display:block; cursor:pointer; box-sizing:border-box; padding:0;}
@@ -77,7 +83,7 @@ button, .button{ text-decoration:none !important;}
 //button:hover, .button:hover{transition: opacity 1.2s, visibility 0s linear 1.2s; opacity:0.7;}
 address{font-style: normal;}
 
-.inner{position:relative; /*max-width:1545px;*/; margin:0 auto; box-sizing: border-box; background:red;} 
+.inner{position:relative; /*max-width:1545px;*/; margin:0 auto; box-sizing: border-box;} 
 section{position:relative;}
 main{position:relative; clear:both;   box-sizing: border-box;}
 header, nav, section, article, aside, footer, main{display:block;}

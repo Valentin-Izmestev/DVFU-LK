@@ -5,8 +5,20 @@
 
  @import './plagins/flatpickr'; 
  @import './plagins/choices'; 
+ @import './plagins/simplebar'; 
+
+ @import './components/step-road/step-road';
+ @import './components/step-road/step-road-link';
+
+ @import './components/for-forms/form-checkbox';
+ @import './components/for-forms/fdvfu-choices';
+ @import './components/for-forms/form-elem';
+ @import './components/for-forms/step-form';
 
 
  @import './components/form'; 
+ @import './components/transition-elem'; 
  @import './components/header'; 
  @import './components/elements'; 
+
+ @import './sections/step-section'; 

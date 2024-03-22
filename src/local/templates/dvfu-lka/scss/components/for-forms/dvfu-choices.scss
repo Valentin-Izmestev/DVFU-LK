@@ -1,0 +1,49 @@
+.form-elem__choices{
+    width: 100%;
+    span {
+      position: relative;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: var(--black);
+        display: inline-block;
+        margin-bottom: 8px;
+        &::after {
+          content: '*';
+          position: absolute;
+            top: -1px;
+            right: -12px;
+            font-size: 2.6rem;
+            font-weight: 400;
+            color: var(--red);
+        }
+    }
+  }
+  
+  .choices {
+    width: 100%;
+    background-color: var(--bg-elem);
+    .choices__inner {
+      border: unset;
+      background-color: var(--bg-elem);
+      min-height: 33px;
+      border-radius: 4px;
+      width: auto;
+    }
+  }
+  .choices[data-type*=select-one]::after{
+    content: '';
+    border: unset;
+    background-image: url('../img/icons/icon-choices.svg');
+    width: 16px;
+    height: 16px;
+    display: block;
+    top: calc(50% - 8px);
+    right: 16px;
+    transition: all ease .3s;
+  }
+  .choices[data-type*=select-one].is-open::after{
+   margin-top: -2.5px;
+   border-color: unset;
+   transform: rotate(-180deg);
+  }
+  
