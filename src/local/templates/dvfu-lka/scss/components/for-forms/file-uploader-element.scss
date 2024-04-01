@@ -1,0 +1,165 @@
+.file-uploader-element{
+    position: relative;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    .file-uploader-element__input{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .file-uploader-element__control-box{
+        position: relative; 
+    }
+    .file-uploader-element-btn{  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 5.2rem;
+        font-size: 1.5rem;
+        padding: 0 3rem;
+        border-radius: 4px;
+        text-emphasis: center;
+        line-height: 1.16;
+        line-height: 1;
+        font-weight: 700; 
+        color: var(--main-blue); 
+        box-sizing: border-box; 
+        transition: var(--great-transition);
+        &:hover{
+            background-color: var(--soft-grey);
+        }
+        .file-uploader-element-btn__upload{
+           display: block;
+        }
+        .file-uploader-element-btn__add{
+            display: none
+        }
+    }
+    .file-uploader-element__preview-box{
+        display: none;
+        grid-gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 1.6rem;
+        border-radius: 4px;
+        border: 2px dashed rgba(0, 150, 214, 0.2);
+        background-color: rgba(212, 239, 252, 0.2);
+        box-sizing: border-box;
+    }
+    .dvfu-tooltip{
+        position: absolute;
+        top: 50%;
+        right: 1.6rem;
+        transform: translateY(-50%);
+    }
+    &.active{
+        .file-uploader-element-btn{
+            .file-uploader-element-btn__upload{ 
+                display: none
+             }
+             .file-uploader-element-btn__add{
+                display: block;
+             }
+        }
+        .file-uploader-element__preview-box{
+            display: grid;
+        }
+    }
+}
+
+
+
+.file-uploader-element-preview{
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 4px;
+    box-sizing: border-box;
+    overflow: hidden;
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+    .file-uploader-element-preview__delete{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        background-color: var(--light);
+        mask-image: url(../img/icons/cross-icon.svg);
+        mask-size: contain;
+        mask-position: center center;
+        mask-repeat: no-repeat;
+        transition: var(--great-transition);
+        z-index: 1;
+        &:hover{
+            background-color: var(--red);
+        }
+    }
+    .file-uploader-element-preview__caption{
+        position: absolute;
+        left: 1rem;
+        bottom: 1rem;
+        font-size: 1.4rem;
+        line-height: 1.17;
+        color: var(--light);
+        z-index: 1;
+    }
+    &--photo{
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/file-uploader-element-preview-gradient.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+    } 
+    &--pdf{
+        .file-uploader-element-preview__delete{
+            &:hover{
+                background-color: var(--soft-blue);
+            }
+        }
+    }
+}
+
+
+
+// ===================================
+@media screen and (max-width: 800px){
+    .file-uploader-element {
+        .file-uploader-element__preview-box { 
+            grid-template-columns: repeat(2, 1fr); 
+        }
+    }
+}
+@media screen and (max-width: 500px){
+    .file-uploader-element {
+        .file-uploader-element__preview-box { 
+            grid-gap: 10px; 
+        }
+    }
+}
+@media screen and (max-width: 400px){
+    .file-uploader-element {
+        .file-uploader-element__preview-box { 
+            grid-template-columns: 1fr; 
+        }
+    }
+}

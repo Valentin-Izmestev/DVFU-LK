@@ -1,7 +1,8 @@
 <header id="header">
      <div class="inner">
         <a href="#" class="logo">
-            <img src="./local/templates/dvfu-lka/img/logo.svg" alt="">
+            <img class="logo__desktop" src="./local/templates/dvfu-lka/img/logo.svg" alt="">
+            <img class="logo__mobil" src="./local/templates/dvfu-lka/img/logo-mobil.svg" alt="">
          </a>
         <h1 class="lka-title">
             Личный кабинет абитуриента
@@ -50,63 +51,92 @@
                 </li>
             </ul>
         </div>
+        <button class="burger-btn">
+            <span></span>
+        </button>
      </div>
      <div class="header-menu-box">
         <div class="menu-container simplebar">
             <button class="sh-header-menu-box-btn">
                 <span class="sh-header-menu-box-btn__icon"></span>
-                Свернуть меню
+                <span class="sh-header-menu-box-btn__caption">Свернуть меню</span> 
             </button>
             <menu class="main-menu"> 
                 <li>
                     <a href="#">
                         <span class="main-menu__icon main-menu__icon--home"></span>
-                        <b>Главная</b>
+                        <span class="main-menu__caption"><b>Главная</b></span>
+                        
                     </a>
                 </li>
                 <li>
                     <a href="#" class="active">
-                        <span class="main-menu__icon main-menu__icon--student"></span>
-                        Подать документы
+                        <span class="main-menu__icon main-menu__icon--student"></span> 
+                        <span><span class="main-menu__caption">Подать документы</span></span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <span class="main-menu__icon main-menu__icon--award"></span>
-                        Результаты экзаменов
+                        <span class="main-menu__icon main-menu__icon--award"></span> 
+                        <span class="main-menu__caption">Результаты экзаменов</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <span class="main-menu__icon main-menu__icon--people"></span>
-                        Списки абитуриентов
+                        <span class="main-menu__icon main-menu__icon--people"></span> 
+                        <span class="main-menu__caption">Списки абитуриентов</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <span class="main-menu__icon main-menu__icon--bookmark"></span>
-                        Сводки о конкурсе
+                        <span class="main-menu__caption">Сводки о конкурсе</span> 
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <span class="main-menu__icon main-menu__icon--task"></span>
-                        Конкурсные списки
+                        <span class="main-menu__icon main-menu__icon--task"></span> 
+                        <span class="main-menu__caption">Конкурсные списки</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <span class="main-menu__icon main-menu__icon--book"></span>
-                        Приказы о зачислении
+                        <span class="main-menu__caption">Приказы о зачислении</span> 
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <span class="main-menu__icon main-menu__icon--folder"></span>
-                        Статистика прошлых лет
+                        <span class="main-menu__caption">Статистика прошлых лет</span>  
                     </a>
                 </li>
             </menu>
+            <div class="lang-select-box">
+                <div class="lang-select">
+                    <div class="lang-select-item">
+                        <span class="lang-select-item__flag lang-select-item__flag--russian"></span>
+                        <span class="lang-select-item__caption">Русский язык</span>
+                    </div>
+                    <span class="lang-select__arrow"></span>
+                    <div class="lang-select__list">
+                        <a href="#" class="lang-select-item">
+                            <span class="lang-select-item__flag lang-select-item__flag--china"></span>
+                            <span class="lang-select-item__caption">中国语文科</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-clock">
+                <div class="menu-clock__top">
+                    <div class="menu-clock__timer-icon"></div>
+                    <div class="menu-clock__timer">17:18</div>
+                    <div class="menu-clock__caption">Время во Владивостоке</div>
+                </div>
+                <p>
+                    Приёмная комиссия работает по местному времени, имейте это в виду во время подачи документов или обращения в техподдержку.
+                </p>
+            </div>
         </div>
         <div class="header-menu-box-footer">
             <span class="header-menu-box-footer__caption">

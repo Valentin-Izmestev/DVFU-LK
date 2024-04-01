@@ -39,6 +39,8 @@ html{
     --dark-purple: #706BAB;
     --soft-btn-blue: #F2F9FD;
     --blue-btn-text: #9BB6BC;
+    --orange-alert: #FEF1EA;
+    --blue-alert: #E6F0F8;
 
     --great-transition: all 200ms ease;
 }
@@ -87,14 +89,14 @@ address{font-style: normal;}
 section{position:relative;}
 main{position:relative; clear:both;   box-sizing: border-box;}
 header, nav, section, article, aside, footer, main{display:block;}
-fieldset{position: relative; border: 0;}
-legend{
-    font-size: 0;
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    opacity: 0;
-}
+// fieldset{position: relative; border: 0;}
+// legend{
+//     font-size: 0;
+//     position: absolute;
+//     width: 1px;
+//     height: 1px;
+//     opacity: 0;
+// }
 
 .cover{background-position:center center; background-repeat:no-repeat; background-size:cover;}
 .contain{background-position:center center; background-repeat:no-repeat; background-size:contain;}

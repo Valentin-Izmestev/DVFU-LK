@@ -66,3 +66,15 @@
         }
     }
 }
+
+// ==========================================
+@media screen and (max-width: 1200px){
+    .step-road-link{
+        .step-road-link__number{
+            border-right: none;
+        }
+        .step-road-link__caption{
+            display: none;
+        }
+    }
+}

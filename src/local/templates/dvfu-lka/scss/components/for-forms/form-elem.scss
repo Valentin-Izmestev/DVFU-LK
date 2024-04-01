@@ -1,7 +1,9 @@
 .form-elem { 
+  position: relative;
     display: flex;
     flex-direction: column;
-    position: relative;
+    width: 100%;
+    
     .form-elem__caption{
       position: relative;
       font-size: 1.4rem;
@@ -11,26 +13,40 @@
       margin-bottom: 8px;
       width: fit-content;
       sup{
-        position: relative;
-        top: 0.8rem;
+        position: absolute;
+        top: 2px;
+        right: -11px;
         font-family: var(--title-font);
         color: var(--red);
         font-size: 1.7rem;
         line-height: 1;
       }
     }
-      .form-elem__field{
+      .form-elem__field{ 
+        width: 100%;
           background-color: var(--bg-elem);
           padding: 16px;
           border-radius: 4px;
           font-size: 1.6rem;
           font-weight: 400; 
+          box-sizing: border-box;
           &[readonly], &[disabled]{
             color: #ABADB0;
             background-color: #E9ECF2;
           }
-  
-      } 
+          &::-webkit-input-placeholder{opacity: 1; transition: opacity 0.3s ease; color: var(--red);}
+          &::-moz-placeholder{opacity: 1; transition: opacity 0.3s ease; color:var(--red);}
+          &:-moz-placeholder{opacity: 1; transition: opacity 0.3s ease; color:var(--red);}
+          &:-ms-input-placeholder{opacity: 1; transition: opacity 0.3s ease; color:var(--red);}
+          &:focus::-webkit-input-placeholder{opacity: 0; transition: opacity 0.3s ease;}
+          &:focus::-moz-placeholder{opacity: 0; transition: opacity 0.3s ease;}
+          &:focus:-moz-placeholder{opacity: 0; transition: opacity 0.3s ease;}
+          &:focus:-ms-input-placeholder{opacity: 0; transition: opacity 0.3s ease;}
+        &.tel-mask {
+          font-size: 1.5rem;
+        }
+      }
+
   
     .element-tooltip{
       position: absolute;
@@ -62,10 +78,40 @@
     } 
     .input-button {
       position: absolute;
-      top: 42px;
+      top: 43px;
       right: 15px;
       cursor: pointer;
-      
+      .icon-calendar {
+        width: 16px;
+        height: 16px;
+        display: block;
+      }
     }
-  
+    .form-elem__textarea {
+      background-color: var(--bg-elem);
+      border-radius: 4px;
+      min-height: 50px;
+      padding: 16px;
+      font-size: 1.5rem;
+      line-height: 1.5;
+      font-weight: 400;
+      color: var(--black)
+    }
+    .form-elem__error-message {
+      display: none;
+      margin-top: 8px;
+      font-size: 1.3rem;
+      color: var(--red); 
+    }
+    .error ~ .form-elem__error-message, 
+    &.error .form-elem__error-message{
+      display: block;
+    }
+
   } 
+.form-elem.form-elem__series {
+  max-width: 90px;
+}
+.form-elem.form-elem__pass {
+  max-width: 150px;
+}

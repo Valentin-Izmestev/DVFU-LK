@@ -4,7 +4,7 @@
     padding: 1.6rem;
     border-radius: 4px;
     background-color: var(--purple);
-    gap: 1.2;
+    gap: 1.2rem;
     font-size: 1.4rem;
     line-height: 1.28;
     color: var(--light);
@@ -34,6 +34,19 @@
             &::before{
                 background-color: var(--dark-purple);
             }
+        }
+    }
+}
+
+
+// =====================================
+@media screen and (max-width: 1200px){
+    .transition-elem{
+        flex-direction: column;
+        padding: 7px;
+        span{
+            // transform: rotate(-90deg);
+            display: none;
         }
     }
 }

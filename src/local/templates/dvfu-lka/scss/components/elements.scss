@@ -1,4 +1,5 @@
  .btn{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,8 +15,48 @@
     font-weight: 600;
     border-radius: 4px;
     transition: var(--great-transition);
+    .btn__caption{
+        position: relative;
+        top: 1px;
+    }
     &:hover{
         background-color: var(--main-blue);
+    }
+    &--next{
+        padding-left: 5rem;
+        padding-right: 5rem;
+        &::after{
+            content: '';
+            position: absolute;
+            right: 2.4rem;
+            top: 50%;
+            width: 2.4rem;
+            height: 2.4rem;
+            background-color: var(--light);
+            mask-image: url(../img/icons/next-arrow.svg);
+            mask-position: center center;
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            transform: translateY(-50%);
+        }
+    }
+    &--prev{
+        padding-left: 5rem;
+        padding-right: 5rem;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 2.4rem;
+            top: 50%;
+            width: 2.4rem;
+            height: 2.4rem;
+            background-color: var(--light);
+            mask-image: url(../img/icons/next-arrow.svg);
+            mask-position: center center;
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            transform: translateY(-50%) scaleX(-1);
+        }
     }
  }
 

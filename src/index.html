@@ -71,10 +71,10 @@
 							<input type="text" name="name1" class="form-elem__field" readonly="readonly" value="Константин" />
 							<span class="form-elem__error-message"></span>
 						</label>
-						<label class="form-elem">
-							<span class="form-elem__caption"> Отчество (если есть) </span>
+						<label class="form-elem error">
+							<span class="form-elem__caption">Заголовок элемента <sup>*</sup></span>
 							<input type="text" name="surname" class="form-elem__field" required="required" placeholder="" />
-							<span class="form-elem__error-message"></span>
+							<span class="form-elem__error-message">текст ошибки</span>
 						</label>
 						<div class="columns-box columns-box--two-col d-flex">
 							<div class="form-elem__choices">
@@ -107,19 +107,7 @@
 								<span class="tooltip__text">Как в паспорте</span>
 								<span class="form-elem__error-message"></span>
 							</div>
-						</label>
-						<div class="columns-box columns-box--two-col d-flex">
-							<label class="form-elem">
-								<span class="form-elem__caption req__caption">Мобильный телефон</span>
-								<input type="text" name="phone" class="form-elem__field tel-mask" required="required" />
-								<span class="form-elem__error-message"></span>
-							</label>
-							<label class="form-elem">
-								<span class="form-elem__caption">Дополнительный телефон</span>
-								<input type="text" name="phone2" class="form-elem__field tel-mask" required="required" />
-								<span class="form-elem__error-message"></span>
-							</label>
-						</div>
+						</label> 
 						<label class="form-elem">
 							<span class="form-elem__caption">E-mail</span>
 							<input type="email" name="email" class="form-elem__field" disabled placeholder="Konstantinopolskii@mail.ru" />
@@ -274,7 +262,7 @@
 					</li>
 				</ul>
 				<div class="transition-elem">
-					Перейти к расстановке приоритетов образовательных программ
+					<span>Перейти к расстановке приоритетов образовательных программ</span>
 					<a href="#" class="transition-elem__link"></a>
 				</div>
 			</div>

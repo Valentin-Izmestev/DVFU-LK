@@ -4,9 +4,27 @@ body{
     box-sizing: border-box;
 }
 .main{
-    flex-grow: 1;
-    height: 1000px;
+    flex-grow: 1; 
     padding: 5rem 6.15% 6.5rem 6.15%; 
     box-sizing: border-box;
 }
 
+// =========================================
+@media screen and (max-width: 1200px){
+    .main{
+        flex-grow: 1; 
+        padding: 2rem 2rem  6.5rem 2rem; 
+        box-sizing: border-box;
+    }
+}
+@media screen and (max-width: 1100px){
+    body {
+        padding-top: 6rem;
+        padding-left: 7rem; 
+    }
+}
+@media screen and (max-width: 735px){
+    .main { 
+        padding: 2.4rem 1rem 6.5rem 1rem; 
+    }
+}

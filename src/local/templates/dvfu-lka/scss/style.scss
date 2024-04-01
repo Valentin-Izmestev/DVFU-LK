@@ -14,11 +14,18 @@
  @import './components/for-forms/dvfu-choices';
  @import './components/for-forms/form-elem';
  @import './components/for-forms/step-form';
+ @import './components/for-forms/form-elem-file';
+ @import './components/for-forms/file-uploader-element';
+ @import './components/for-forms/form-alert';
+ @import './components/for-forms/form-alert-attantion';
 
 
  @import './components/form'; 
  @import './components/transition-elem'; 
  @import './components/header'; 
  @import './components/elements'; 
+ @import './components/dvfu-tooltip'; 
 
  @import './sections/step-section'; 
+
+ @import 'media';
