@@ -1,0 +1,204 @@
+.form-message{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.8rem 2.4rem 1.8rem 2.4rem;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: var(--black);
+    box-sizing: border-box;
+    p{
+        margin: 0 !important;;
+        font-size: inherit !important;
+        line-height: inherit !important;
+        color: inherit !important;
+    }
+    ul, ol{
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        margin: 0;
+        padding: 0;
+    }
+    ul{
+        list-style-type: none;
+        li{
+            position: relative; 
+            padding-left: 1.6rem;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 7px;
+                left: 0;
+                width: 5px;
+                height: 5px;
+                transform: rotate(45deg);
+                transform-origin: center center;
+            }
+        }
+    }
+    ol{
+        list-style-type: none;
+        counter-reset: num;
+        li{
+            position: relative; 
+            padding-left: 1.6rem;
+            &::before{
+                content: counter(num) '.'; 
+	            counter-increment: num;
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+    }
+    .form-message__caption{
+        display: block;
+        font-size: 1.5rem;
+        line-height: 1.24;
+        font-weight: 500;
+        font-family: var(--title-font);
+    }
+    &--icon-i{
+        padding-left: 4.6rem;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 1.8rem;
+            left: 1.8rem;
+            width: 2rem;
+            height: 2rem;
+            mask-image: url(../img/icons/i-icon.svg); 
+            mask-size: contain;
+            mask-position: center center;
+            mask-repeat: no-repeat;
+        }
+    }
+    &--icon-exclamation{
+        padding-left: 4.6rem;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 1.8rem;
+            left: 1.8rem;
+            width: 2rem;
+            height: 2rem; 
+            mask-image: url(../img/icons/exclamation.svg); 
+            mask-size: contain;
+            mask-position: center center;
+            mask-repeat: no-repeat;
+        }
+    }
+    &--icon-mark{
+        padding-left: 4.6rem;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 1.8rem;
+            left: 1.8rem;
+            width: 2rem;
+            height: 2rem; 
+            mask-image: url(../img/icons/mark-icon.svg);
+            mask-size: contain;
+            mask-position: center center;
+            mask-repeat: no-repeat;
+        }
+    }
+    &--blue{
+        background-color: #E6F0F8;
+        &::before{
+            background-color: var(--soft-blue);
+        }
+        .form-message__caption{
+            color: var(--main-blue);
+        }
+        ul{
+            li{
+                &::before{
+                    background-color: var(--soft-blue);
+                }
+            }
+        }
+        ol{
+            li{
+                &::before{
+                    color: var(--soft-blue);
+                }
+            }
+        }
+    }
+    &--orange{
+        background-color: #FEF1EA;
+        &::before{
+            background-color: var(--orange);
+        }
+        .form-message__caption{
+            color: var(--orange);
+        }
+        ul{
+            li{
+                &::before{
+                    background-color: var(--orange);
+                }
+            }
+        }
+        ol{
+            li{
+                &::before{
+                    color: var(--orange);
+                }
+            }
+        }
+    }
+    &--green{
+        background-color: #F0F9F4;
+        &::before{
+            background-color: var(--green);
+        }
+        .form-message__caption{
+            color: var(--green);
+        }
+        ul{
+            li{
+                &::before{
+                    background-color: var(--green);
+                }
+            }
+        }
+        ol{
+            li{
+                &::before{
+                    color: var(--green);
+                }
+            }
+        }
+    }
+    &--violet{
+        background-color: #FBEEF1;
+        &::before{
+            background-color: var(--violet);
+        }
+        .form-message__caption{
+            color: var(--violet);
+        }
+        ul{
+            li{
+                &::before{
+                    background-color: var(--violet);
+                }
+            }
+        }
+        ol{
+            li{
+                &::before{
+                    color: var(--violet);
+                }
+            }
+        }
+    }
+
+}

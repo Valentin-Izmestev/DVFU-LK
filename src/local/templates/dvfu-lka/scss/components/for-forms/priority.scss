@@ -1,0 +1,39 @@
+.priority{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7.5px 8px;
+    width: fit-content;
+    background-color: var(--light); 
+    box-sizing: border-box;
+    .priority__btn{
+        width: 1.6rem;
+        height: 1.6rem;
+        mask-image: url(../img/arrow-icon.svg);
+        mask-size: contain;
+        mask-position: center center;
+        mask-repeat: no-repeat;
+        background-color: var(--main-blue);
+        transform-origin: center center;
+        transition: var(--great-transition);
+        &[disabled="disabled"]{
+            background-color: var(--light-blue);
+            cursor:auto;
+        }
+        &--top{
+            
+            transform: rotate(180deg);
+        }
+        &--bottom{
+            transform: rotate(0);
+        } 
+    }
+    .priority__count{ 
+        min-width: 2.4rem;
+        height: 1.6rem;
+        font-size: 1.3rem;
+        font-family: var(--title-font);
+        font-weight: 500;
+        text-align: center; 
+    }
+}

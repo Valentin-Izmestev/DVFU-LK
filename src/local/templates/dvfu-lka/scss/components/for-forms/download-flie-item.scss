@@ -1,0 +1,25 @@
+.download-flie-item{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background-color: var(--bg);
+    padding: 16px;
+    box-sizing: border-box;
+
+    .download-flie-item__caption{
+        flex-grow: 1;
+        font-size: 1.6rem;
+        line-height: 1.17;
+    }
+    .download-flie-item__link{
+        flex-shrink: 0;
+        font-size: 0;
+        width: 1.8rem;
+        height: 1.8rem;
+        background-color: var(--main-blue);
+        mask-image: url(../img/icons/download-icon.svg);
+        mask-size: contain;
+        mask-position: center center;
+        mask-repeat: no-repeat; 
+    }
+}

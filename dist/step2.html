@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Title here</title>
+
+	<!--   Cascading Style Sheets-->
+	<!-- <link rel="stylesheet" href="css/style.css">  -->
+	<link rel="stylesheet" href="./local/templates/dvfu-lka/css/style.min.css">
+	<noscript>
+		<style>
+			.content-wrapper {
+				overflow: auto;
+			}
+		</style>
+	</noscript>
+</head>
+
+<body>
+
+	<header id="header">
+     <div class="inner">
+        <a href="#" class="logo">
+            <img class="logo__desktop" src="./local/templates/dvfu-lka/img/logo.svg" alt="">
+            <img class="logo__mobil" src="./local/templates/dvfu-lka/img/logo-mobil.svg" alt="">
+         </a>
+        <h1 class="lka-title">
+            Личный кабинет абитуриента
+        </h1>
+        <div class="dvfu-clock">
+            <span class="dvfu-clock__icon"></span>
+            17:18
+            <div class="dvfu-clock-pop-up">
+                <span class="dvfu-clock-pop-up__caption title">Время во Владивостоке</span>
+                <p>
+                    Приёмная комиссия работает по местному времени, имейте это в виду во время подачи документов или обращения в техподдержку.
+                </p>
+            </div>
+        </div>
+        <div class="lang-select-box">
+            <div class="lang-select">
+                <div class="lang-select-item">
+                    <span class="lang-select-item__flag lang-select-item__flag--russian"></span>
+                    <span class="lang-select-item__caption">RU</span>
+                </div>
+                <span class="lang-select__arrow"></span>
+                <div class="lang-select__list">
+                    <a href="#" class="lang-select-item">
+                        <span class="lang-select-item__flag lang-select-item__flag--china"></span>
+                        <span class="lang-select-item__caption">CH</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header-user-box">
+            <span class="header-user-box__avatar"></span>
+            <span class="header-user-box__login" title="Konstantinopolskii@mail.ru">Konstantinopolskii@mail.ru</span>
+            <span class="header-user-box__arrow"></span>
+            <ul class="header-user-menu">
+                <li>
+                    <a href="#">Настройки</a>
+                </li>
+                <li>
+                    <a href="#">Какой-то пункт</a>
+                </li>
+                <li>
+                    <a href="#">Какой-то пункт</a>
+                </li>
+                <li>
+                    <a href="#">Выйти</a>
+                </li>
+            </ul>
+        </div>
+        <button class="burger-btn">
+            <span></span>
+        </button>
+     </div>
+     <div class="header-menu-box">
+        <div class="menu-container simplebar">
+            <button class="sh-header-menu-box-btn">
+                <span class="sh-header-menu-box-btn__icon"></span>
+                <span class="sh-header-menu-box-btn__caption">Свернуть меню</span> 
+            </button>
+            <menu class="main-menu"> 
+                <li>
+                    <a href="#">
+                        <span class="main-menu__icon main-menu__icon--home"></span>
+                        <span class="main-menu__caption"><b>Главная</b></span>
+                        
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="active">
+                        <span class="main-menu__icon main-menu__icon--student"></span> 
+                        <span><span class="main-menu__caption">Подать документы</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="main-menu__icon main-menu__icon--award"></span> 
+                        <span class="main-menu__caption">Результаты экзаменов</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="main-menu__icon main-menu__icon--people"></span> 
+                        <span class="main-menu__caption">Списки абитуриентов</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="main-menu__icon main-menu__icon--bookmark"></span>
+                        <span class="main-menu__caption">Сводки о конкурсе</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="main-menu__icon main-menu__icon--task"></span> 
+                        <span class="main-menu__caption">Конкурсные списки</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="main-menu__icon main-menu__icon--book"></span>
+                        <span class="main-menu__caption">Приказы о зачислении</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="main-menu__icon main-menu__icon--folder"></span>
+                        <span class="main-menu__caption">Статистика прошлых лет</span>  
+                    </a>
+                </li>
+            </menu>
+            <div class="lang-select-box">
+                <div class="lang-select">
+                    <div class="lang-select-item">
+                        <span class="lang-select-item__flag lang-select-item__flag--russian"></span>
+                        <span class="lang-select-item__caption">Русский язык</span>
+                    </div>
+                    <span class="lang-select__arrow"></span>
+                    <div class="lang-select__list">
+                        <a href="#" class="lang-select-item">
+                            <span class="lang-select-item__flag lang-select-item__flag--china"></span>
+                            <span class="lang-select-item__caption">中国语文科</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-clock">
+                <div class="menu-clock__top">
+                    <div class="menu-clock__timer-icon"></div>
+                    <div class="menu-clock__timer">17:18</div>
+                    <div class="menu-clock__caption">Время во Владивостоке</div>
+                </div>
+                <p>
+                    Приёмная комиссия работает по местному времени, имейте это в виду во время подачи документов или обращения в техподдержку.
+                </p>
+            </div>
+        </div>
+        <div class="header-menu-box-footer">
+            <span class="header-menu-box-footer__caption">
+                Нужна помощь?
+            </span>
+            <button class="btn">Написать в чат</button>
+        </div>
+     </div>
+     <div class="header__shadow">
+        
+     </div>
+</header>
+	<main class="main">
+		<div class="step-section">
+			<div class="step-box step-section__left-col">
+				<form class="step-form">
+					<div class="step-form__header">
+						<div class="step__number ">Шаг 2</div>
+						<h2>Паспортные данные</h2>
+						<p>
+							Заполните Ваши персональные данные, укажите контактную информацию
+						</p>
+						<div class="decor-line mt24"></div>
+					</div>
+					<fieldset>
+						<div class="columns-box columns-box--two-col">
+							<div class="form-elem form-elem-choices form-elem-choices--no-placeholder">
+								<span class="form-elem__caption">Гражданство <sup>*</sup></span>
+								<select name="сitizenship" class="select-ch" required="required">
+									<option value="">Не выбрано</option>
+									<option value="РФ">РФ</option>
+									<option value="Страна 1">Страна 1</option>
+									<option value="Страна 2">Страна 2</option>
+									<option value="Страна 3">Страна 3</option>
+									<option value="Страна 4">Страна 4</option>
+									<option value="Страна 5">Страна 5</option>
+									<option value="Страна 6">Страна 6</option>
+									<option value="Страна 7">Страна 7</option>
+									<option value="Страна 8">Страна 8</option>
+									<option value="Страна 9">Страна 9</option>
+									<option value="Страна 10">Страна 10</option>
+									<option value="Страна 11">Страна 11</option>
+									<option value="Страна 12">Страна 12</option>
+									<option value="Страна 13">Страна 13</option>
+									<option value="Страна 14">Страна 14</option>
+									<option value="Страна 15">Страна 15</option>
+									<option value="Страна 16">Страна 16</option>
+									<option value="Страна 17">Страна 17</option>
+									<option value="Страна 18">Страна 18</option>
+									<option value="Страна 19">Страна 19</option>
+									<option value="Страна 20">Страна 20</option>
+								</select>
+								<span class="form-elem__error-message"></span>
+							</div>
+							<div class="form-elem form-elem-choices form-elem-choices--no-placeholder">
+								<span class="form-elem__caption">Удостоверение личности <sup>*</sup></span>
+								<select name="сitizenship" class="select-ch select-ch--no-search" required="required">
+									<option value="">Не выбрано</option>
+									<option value="аспорт РФ">Паспорт РФ</option>
+									<option value="Не паспорт РФ">Не паспорт РФ</option>
+								</select>
+								<span class="form-elem__error-message"></span>
+							</div>
+						</div>
+						<div class="columns-box columns-box--two-col">
+							<label class="form-elem ">
+								<span class="form-elem__caption">Номер документа<sup>*</sup></span>
+								<input type="text" name="pasport-namber" class="form-elem__field" required="required">
+								<span class="form-elem__error-message">текст ошибки</span>
+							</label>
+							<label class="form-elem">
+								<span class="form-elem__caption req__caption">Дата выдачи<sup>*</sup></span>
+								<span class="dvfu-flatpickr-box">
+									<input type="text" name="date-of-issue" class="form-elem__field dvfu-flatpickr" placeholder="__.__.____" required="required">
+								</span>
+								<span class="form-elem__error-message"></span>
+							</label>
+						</div>
+						<label class="form-elem">
+							<span class="form-elem__caption"> Кем выдан <sup>*</sup> </span>
+							<textarea class="form-elem__textarea form-elem__textarea-autoheigth" name="name7" required="required"></textarea>
+						</label>
+						<div class="columns-box columns-box--two-col">
+							<label class="form-elem ">
+								<span class="form-elem__caption">СНИЛС <sup>*</sup></span>
+								<input type="text" name="snils" class="form-elem__field num-mask-snils" required="required"  value="Какой-то текст">
+								<span class="form-elem__error-message">текст ошибки</span>
+							</label> 
+							<div class="form-elem">
+								<span class="form-elem__caption">Скан СНИЛС</span>
+								<div class="form-elem-file">
+									<input type="file" name="photo-multy" class="form-elem-file__input">
+									<div class="form-elem-file__preview-box">
+									</div>
+									<div class="form-elem-file__control-box">
+										<button type="button" class="form-elem-file__upload-btn">Загрузить файл</button>
+										<div class="dvfu-tooltip">
+											<span class="dvfu-tooltip__trigger">Подсказка</span>
+											<div class="dvfu-tooltip__body">
+												Подгрузите скан СНИЛС
+											</div>
+										</div>
+									</div>  
+								</div>
+								<span class="form-elem__error-message"></span>
+							</div> 
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend>Адрес прописки</legend>
+						<div class="form-elem form-elem-choices">
+							<span class="form-elem__caption">Страна проживания <sup>*</sup></span>
+							<select name="country-of-residence" class="select-ch" required="required">
+								<option value="">Не выбрано</option>
+								<option value="РФ">РФ</option>
+								<option value="Страна 1">Страна 1</option>
+								<option value="Страна 2">Страна 2</option>
+								<option value="Страна 3">Страна 3</option>
+								<option value="Страна 4">Страна 4</option>
+								<option value="Страна 5">Страна 5</option>
+								<option value="Страна 6">Страна 6</option>
+								<option value="Страна 7">Страна 7</option>
+								<option value="Страна 8">Страна 8</option>
+								<option value="Страна 9">Страна 9</option>
+								<option value="Страна 10">Страна 10</option>
+								<option value="Страна 11">Страна 11</option>
+								<option value="Страна 12">Страна 12</option>
+								<option value="Страна 13">Страна 13</option>
+								<option value="Страна 14">Страна 14</option>
+								<option value="Страна 15">Страна 15</option>
+								<option value="Страна 16">Страна 16</option>
+								<option value="Страна 17">Страна 17</option>
+								<option value="Страна 18">Страна 18</option>
+								<option value="Страна 19">Страна 19</option>
+								<option value="Страна 20">Страна 20</option>
+							</select>
+							<span class="form-elem__error-message"></span>
+						</div>
+						<div class="form-elem form-elem-choices">
+							<span class="form-elem__caption">Регион проживания <sup>*</sup></span>
+							<select name="country-of-residence" class="select-ch" required="required">
+								<option value="">Не выбрано</option>
+								<option value="Курская область">Курская область</option>
+								<option value="Регион 1">Регион 1</option>
+								<option value="Регион 2">Регион 2</option>
+								<option value="Регион 3">Регион 3</option>
+								<option value="Регион 4">Регион 4</option>
+								<option value="Регион 5">Регион 5</option>
+								<option value="Регион 6">Регион 6</option>
+								<option value="Регион 7">Регион 7</option>
+								<option value="Регион 8">Регион 8</option>
+								<option value="Регион 9">Регион 9</option>
+								<option value="Регион 10">Регион 10</option>
+								<option value="Регион 11">Регион 11</option>
+								<option value="Регион 12">Регион 12</option>
+								<option value="Регион 13">Регион 13</option>
+								<option value="Регион 14">Регион 14</option>
+								<option value="Регион 15">Регион 15</option>
+								<option value="Регион 16">Регион 16</option>
+								<option value="Регион 17">Регион 17</option>
+								<option value="Регион 18">Регион 18</option>
+								<option value="Регион 19">Регион 19</option>
+								<option value="Регион 20">Регион 20</option>
+							</select>
+							<span class="form-elem__error-message"></span>
+						</div>
+						<div class="form-elem">
+							<span class="form-elem__caption">Адрес прописки <sup>*</sup></span>
+							<div class="form-elem-input-box">
+								<input type="text" name="residence-address" class="form-elem__field" required="required">
+								<div class="dvfu-tooltip">
+									<span class="dvfu-tooltip__trigger">Подсказка</span>
+									<div class="dvfu-tooltip__body alCenter">
+										Где жевете?
+									</div>
+								</div>
+							</div>
+							<span class="form-elem__error-message">текст ошибки</span>
+						</div>
+						<div class="form-elem">
+							<span class="form-elem__caption">Скан паспорта <sup>*</sup></span>
+							<div class="form-elem-file">
+								<input type="file" name="pasport-scan" class="form-elem-file__input" required="required">
+								<div class="form-elem-file__preview-box">
+								</div>
+								<div class="form-elem-file__control-box">
+									<button type="button" class="form-elem-file__upload-btn">Загрузить файл</button>
+									<div class="dvfu-tooltip">
+										<span class="dvfu-tooltip__trigger">Подсказка</span>
+										<div class="dvfu-tooltip__body">
+											Подгрузите скан Скан паспорта
+										</div>
+									</div>
+								</div>  
+							</div>
+							<span class="form-elem__error-message"></span>
+						</div> 
+						<div class="form-elem">
+							<span class="form-elem__caption">Скан паспорта (Разворот с регистрацией)  <sup>*</sup></span>
+							<div class="form-elem-file">
+								<input type="file" name="pasport-scan-2" class="form-elem-file__input" required="required">
+								<div class="form-elem-file__preview-box">
+								</div>
+								<div class="form-elem-file__control-box">
+									<button type="button" class="form-elem-file__upload-btn">Загрузить файл</button>
+									<div class="dvfu-tooltip">
+										<span class="dvfu-tooltip__trigger">Подсказка</span>
+										<div class="dvfu-tooltip__body">
+											Подгрузите скан Скан паспорта
+										</div>
+									</div>
+								</div>  
+							</div>
+							<span class="form-elem__error-message"></span>
+						</div> 
+						<div class="form-elem">
+							<span class="form-elem__caption">Скан паспорта (Сведения о  выданных паспортах) 18-19 стр <sup>*</sup></span>
+							<div class="form-elem-file">
+								<input type="file" name="pasport-scan-3" class="form-elem-file__input"  multiple="multiple" required="required">
+								<div class="form-elem-file__preview-box">
+								</div>
+								<div class="form-elem-file__control-box">
+									<button type="button" class="form-elem-file__upload-btn">Загрузить файл</button>
+									<div class="dvfu-tooltip">
+										<span class="dvfu-tooltip__trigger">Подсказка</span>
+										<div class="dvfu-tooltip__body">
+											Скан паспорта (Сведения о  выданных паспортах) 
+										</div>
+									</div>
+								</div>  
+							</div>
+							<span class="form-elem__error-message"></span>
+						</div> 
+					</fieldset>
+					<fieldset>
+                        <div class="decor-line"></div>
+                        <span class="fieldset__caption">Соотечественники</span>
+                        <label class="form-checkbox">
+                            <input type="checkbox" name="Compatriots" value="value-1">
+                            <i></i>
+                            <span class="form-checkbox__caption">Я являюсь соотечественником, постоянно проживающим за рубежом</span>
+                        </label>
+                        <div class="decor-line"></div>
+                    </fieldset>
+					<div class="step-form__footer">
+						<button class="btn btn--next" disabled="disabled">
+							<span class="btn__caption">Следующий шаг</span>
+						</button>
+						<p>Для перехода на следующий шаг вам необходимо заполнить все обязательные поля</p>
+					</div>
+				</form>
+			</div>
+			<div class="step-section__right-col">
+				<ul class="step-road">
+					<li>
+						<a href="step1.html" class="step-road-link step-road-link--completed">
+							<span class="step-road-link__number">1.<sup>*</sup></span>
+							<span class="step-road-link__caption">
+								Анкетные данные
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="step2.html" class="step-road-link step-road-link--currnet">
+							<span class="step-road-link__number">2.<sup>*</sup></span>
+							<span class="step-road-link__caption">
+								Паспортные данные
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="step3.html" class="step-road-link">
+							<span class="step-road-link__number">3.</span>
+							<span class="step-road-link__caption">
+								Законный представитель
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="step4.html" class="step-road-link">
+							<span class="step-road-link__number">4.<sup>*</sup></span>
+							<span class="step-road-link__caption">
+								Документ об образовании
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="step5.html" class="step-road-link">
+							<span class="step-road-link__number">5.</span>
+							<span class="step-road-link__caption">
+								Результаты ЕГЭ
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="step6.html" class="step-road-link">
+							<span class="step-road-link__number">6.</span>
+							<span class="step-road-link__caption">
+								Сведения о льготах
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="step7.html" class="step-road-link">
+							<span class="step-road-link__number">7.</span>
+							<span class="step-road-link__caption">
+								Сведения о договоре на целевое обучение
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="step8.html" class="step-road-link">
+							<span class="step-road-link__number">8.<sup>*</sup></span>
+							<span class="step-road-link__caption">
+								Личное дело
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="step9.html" class="step-road-link">
+							<span class="step-road-link__number">9.<sup>*</sup></span>
+							<span class="step-road-link__caption">
+								Приоритеты
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="step10.html" class="step-road-link">
+							<span class="step-road-link__number">10.</span>
+							<span class="step-road-link__caption">
+								Индивидуальные достижения
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="step11.html" class="step-road-link">
+							<span class="step-road-link__number">11.</span>
+							<span class="step-road-link__caption">
+								Сведения о дипломах олимпиад
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="step12.html" class="step-road-link">
+							<span class="step-road-link__number">12.</span>
+							<span class="step-road-link__caption">
+								Применение льготы "Без экзаменов"
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="step13.html" class="step-road-link">
+							<span class="step-road-link__number">13.</span>
+							<span class="step-road-link__caption">
+								Вступительные испытания
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="step14.html" class="step-road-link">
+							<span class="step-road-link__number">14.</span>
+							<span class="step-road-link__caption">
+								Портфолио
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="step15.html" class="step-road-link">
+							<span class="step-road-link__number">15.</span>
+							<span class="step-road-link__caption">
+								Печать документов
+							</span>
+						</a>
+					</li>
+				</ul>
+				<div class="transition-elem">
+					<span>Перейти к расстановке приоритетов образовательных программ</span>
+					<a href="#" class="transition-elem__link"></a>
+				</div>
+			</div>
+
+		</div>
+	</main>
+	<div class="great-shadow"></div>
+	<!-- ++++++++++JavaScript++++++++++-->
+	<!-- <script type="text/javascript" src="js/jquery-1.12.1.js"></script> -->
+	<!-- <script type="text/javascript" src="./local/templates/lka/js/script.min.js"></script> -->
+	<script src="./local/templates/dvfu-lka/js/script.js"></script>
+	<!-- ++++++++++JavaScript end++++++++++-->
+</body>
+
+</html>

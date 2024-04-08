@@ -1,0 +1,114 @@
+.btn{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 2rem;
+    min-height: 5.6rem;
+    font-family: var(--title-font);
+    font-size: 1.2rem;
+    line-height: 1.24;
+    color: var(--bg);
+    background-color: var(--soft-blue);
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: var(--great-transition);
+    .btn__caption{
+        position: relative;
+        top: 1px;
+    }
+    &:hover{
+        background-color: var(--main-blue);
+    }
+    &--next{
+        padding-left: 5rem;
+        padding-right: 5rem;
+        &::after{
+            content: '';
+            position: absolute;
+            right: 2.4rem;
+            top: 50%;
+            width: 2.4rem;
+            height: 2.4rem;
+            background-color: var(--light);
+            mask-image: url(../img/icons/next-arrow.svg);
+            mask-position: center center;
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            transform: translateY(-50%);
+        }
+    }
+    &--prev{
+        padding-left: 5rem;
+        padding-right: 5rem;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 2.4rem;
+            top: 50%;
+            width: 2.4rem;
+            height: 2.4rem;
+            background-color: var(--light);
+            mask-image: url(../img/icons/next-arrow.svg);
+            mask-position: center center;
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            transform: translateY(-50%) scaleX(-1);
+        }
+    }
+    
+    &--light{
+        background-color: var(--soft-btn-blue);
+        color: var(--main-blue);
+        font-family: 'HeliosC', sans-serif;
+        text-transform: none;
+        font-size: 1.5rem;
+        &:hover{
+            background-color:   var(--light-blue);
+        }
+    }
+
+    &--reg-font{
+        
+    }
+
+    &[disabled]{
+        background-color: var(--bg-elem);
+        color: var(--grey);
+        cursor: auto;
+        &::after, &::before{
+            background-color: var(--grey);
+        }
+        &:hover{
+            background-color: var(--bg-elem);
+        }
+    }
+    
+ }
+
+
+ .elem-btn{
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--grey);
+    mask-size: contain;
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    font-size: 0;
+    transition: var(--great-transition);
+    &--edit{
+        mask-image: url(../img/icons/edit-icon.svg);
+        &:hover{
+            background-color: var(--main-blue);
+        }
+    }
+    &--remove{
+        mask-size: 90% 90%;
+        mask-image: url(../img/icons/cross-icon.svg);
+        &:hover{
+            background-color: var(--red);
+        }
+    }
+} 

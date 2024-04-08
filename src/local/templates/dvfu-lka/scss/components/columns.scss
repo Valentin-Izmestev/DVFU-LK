@@ -1,0 +1,47 @@
+.columns-box{
+    display: grid;
+    grid-gap: 2.4rem;
+    &--series-and-namber{
+        grid-template-columns: 1fr 1.5fr;
+        grid-gap: 1.6rem;
+    }
+    &--two-col { 
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &--three-col { 
+        grid-template-columns: repeat(3, 1fr);
+    }
+    &--four-col { 
+        grid-template-columns: repeat(4, 1fr);
+    }
+    &--estimation{
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.6rem;
+    }
+ }
+
+
+//  ======================================
+@media screen and (max-width: 600px){
+    .columns-box{
+        display: grid;
+        grid-gap: 2.4rem;
+        &--series-and-namber{
+            grid-template-columns:  repeat(2, 1fr);
+            grid-gap: 1.6rem;
+        }
+        &--two-col { 
+            grid-template-columns: 1fr;
+        }
+        &--three-col { 
+            grid-template-columns: repeat(3, 1fr);
+        }
+        &--four-col { 
+            grid-template-columns: repeat(4, 1fr);
+        }
+        &--estimation{
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1.6rem;
+        }
+     }
+}

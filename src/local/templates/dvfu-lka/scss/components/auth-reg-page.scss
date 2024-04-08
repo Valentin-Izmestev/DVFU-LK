@@ -1,0 +1,38 @@
+.auth-reg-page{
+    padding-left: 0;
+    .main{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--light-blue);
+        padding: 0;
+        background-image: url(../img/decoration-bg.svg);
+    }
+}
+
+.auth-reg-container{ 
+    flex-grow: 1; 
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start; 
+    align-items: center;
+    // z-index: 99; 
+    padding:30px;
+    box-sizing: border-box;
+}
+.auth-reg-panel{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    max-width: 500px; 
+    padding: 5rem;
+    background-color: var(--light);
+    box-sizing: border-box;
+}

@@ -1,0 +1,39 @@
+.admission-parameters-box{
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+.admission-parameter{
+    display: block;
+    padding: 5px 10px;
+    border: 1px solid var(--bg);
+    border-radius: 23px;
+    white-space: nowrap;
+    // box-sizing: border-box;
+    font-size: 1.2rem;
+    line-height: 1;
+    &--main-blue{
+        border: 1px solid var(--main-blue);
+    }
+    &--aquamarin{
+        border: 1px solid var(--aquamarin);
+    }
+    &--orange{
+        border: 1px solid var(--orange);
+    }
+    &--soft-blue{
+        border: 1px solid var(--soft-blue);
+    }
+    &--purple{
+        border: 1px solid #8B76BD;
+    }
+    &--dark-yellow{
+        border: 1px solid #FFD04E;
+    }
+    &--dark-yellow{
+        border: 1px solid #FFD04E;
+    }
+    &--green{
+        border: 1px solid var(--green);
+    }
+}

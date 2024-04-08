@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', function(){
             });
         }
  
-        window.addEventListener('resize', function(){
-            if(window.innerWidth <= 1100){
-                document.body.classList.add('expland-menu');
-            } 
-        });
+        // window.addEventListener('resize', function(){
+        //     if(window.innerWidth <= 1100){
+        //         document.body.classList.add('expland-menu');
+        //     } 
+        // });
 
         let burgerBtn = document.querySelector('.burger-btn');
         if(burgerBtn){
@@ -32,7 +32,13 @@ document.addEventListener('DOMContentLoaded', function(){
         let arFef = [];
         if(nlFormElemFiles.length > 0){
             nlFormElemFiles.forEach(item=>{
-                let fef = new FormElemFile(item);
+                let fef = new FormElemFile(item, {
+                    accept: ['.pdf', '.jpg', '.png'],
+                    maxSize: 5242880, 
+                    maxLongNameFile: 7, 
+                    maxSizeErrorMessage: 'Максимальный размер загружаемого файла 5МБ',
+                    acceptErrorMessage: 'Недопустимое расширение файла'
+                });
                 arFef.push(fef);
             }); 
         }
@@ -53,6 +59,28 @@ document.addEventListener('DOMContentLoaded', function(){
                 );
                 arFUE.push(fue);
             });
+        }
+        
+        let nlDvfuTooltip = document.querySelectorAll('.dvfu-tooltip');
+        let arrTooltip = [];
+        if(nlDvfuTooltip.length > 0){
+            nlDvfuTooltip.forEach(tooltip => {
+                let tp = new ViTooltip(tooltip);
+            });
+        }
+
+        // автовысота textarea
+        var nlTextarea = document.querySelectorAll('.form-elem__textarea-autoheigth');
+        if(nlTextarea.length > 0){
+            nlTextarea.forEach(tx=>{
+                tx.setAttribute('style', 'height:'+ (tx.scrollHeight) +'px;overflow-y:hidden;');
+                tx.addEventListener("input", OnInput, false);
+            });
+        }
+
+        function OnInput() {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
         }
         
 });

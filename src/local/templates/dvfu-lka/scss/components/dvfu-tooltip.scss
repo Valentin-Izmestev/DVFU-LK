@@ -2,9 +2,8 @@
     position: relative;
     width: 2rem;
     height: 2rem;
-    z-index: 5;
-}
-
+    z-index: 20; 
+} 
 .dvfu-tooltip__body{
     position: absolute;
     width: auto;
@@ -12,15 +11,29 @@
     border-radius: 4px; 
     top: 120%;
     left: 50%;
+    width: 200px;
     background-color: var(--light);
     border: 1px solid var(--soft-blue);
     font-size: 14px;
     box-sizing: border-box;
     transform: translateX(-50%);
-    transition: var(--great-transition);
-    z-index: 9;
+    transition: opacity 200ms ease;
+    z-index: 1;
     opacity: 0; 
     visibility: hidden;
+    &--left{
+        left: -10px;
+        transform: translateX(0);
+    }
+    &--right{
+        left: auto;
+        right: -10px;
+        transform: translateX(0);
+    }
+    &--top{
+        top: auto;
+        bottom: 120%;
+    }
 }
 .dvfu-tooltip__trigger{
     display: block;

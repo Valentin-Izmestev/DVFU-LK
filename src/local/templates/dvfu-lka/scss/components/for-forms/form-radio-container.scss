@@ -1,0 +1,9 @@
+.form-radio-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+    &--horizontal{
+        flex-direction: row;
+    }
+}

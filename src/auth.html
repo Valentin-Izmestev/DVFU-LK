@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Title here</title>
+
+	<!--   Cascading Style Sheets-->
+	<!-- <link rel="stylesheet" href="css/style.css">  -->
+	<link rel="stylesheet" href="./local/templates/dvfu-lka/css/style.min.css">
+	<noscript>
+		<style>
+			.content-wrapper {
+				overflow: auto;
+			}
+		</style>
+	</noscript>
+</head>
+
+<body class="auth-reg-page">
+
+	@@include('_header-auth.html')
+	<main class="main">
+		 <div class="auth-reg-container">
+			<div class="auth-reg-panel">
+				<h2 class="auth-reg-panel__title">Авторизация</h2>
+				<label class="form-elem error">
+					<span class="form-elem__caption">E-mail</span>
+					<input type="email" name="email" class="form-elem__field" pattern="^\S+@\S+\.\S+$" required="required">
+					<span class="form-elem__error-message">Описание ошибки</span>
+				</label>
+				<div class="form-elem">
+					<span class="form-elem__caption">
+						Пароль
+					</span>
+					<div class="form-elem__password-field-box">
+						<input type="password" name="password" class="form-elem__field" required="required" placeholder="Введите пароль">
+						<button type="button"  class="form-elem__btn-show-pass"></button>
+					</div>
+					<span class="form-elem__error-message">Описание ошибки</span>
+				</div>
+				
+			</div>
+			
+			</div>
+		 </div>
+	</main>
+	<div class="great-shadow"></div>
+	<!-- ++++++++++JavaScript++++++++++-->
+	<!-- <script type="text/javascript" src="js/jquery-1.12.1.js"></script> -->
+	<!-- <script type="text/javascript" src="./local/templates/lka/js/script.min.js"></script> -->
+	<script src="./local/templates/dvfu-lka/js/script.js"></script>
+	<!-- ++++++++++JavaScript end++++++++++-->
+</body>
+
+</html>

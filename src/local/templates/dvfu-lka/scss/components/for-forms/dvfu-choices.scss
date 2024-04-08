@@ -1,49 +1,169 @@
-.form-elem__choices{
-    width: 100%;
-    span {
-      position: relative;
-        font-size: 1.4rem;
-        font-weight: 400;
-        color: var(--black);
-        display: inline-block;
-        margin-bottom: 8px;
-        &::after {
-          content: '*';
-          position: absolute;
-            top: -1px;
-            right: -12px;
-            font-size: 2.6rem;
-            font-weight: 400;
-            color: var(--red);
-        }
+.form-elem-choices {
+  width: 100%;
+
+  span {
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--black);
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .choices__inner {
+    font-size: 1.5rem;
+  }
+
+  &--no-placeholder {
+    .choices__placeholder {
+      opacity: 0;
+    }
+
+    .choices__list {
+      .choices__placeholder {
+        display: none;
+      }
     }
   }
-  
-  .choices {
-    width: 100%;
-    background-color: var(--bg-elem);
-    .choices__inner {
-      border: unset;
-      background-color: var(--bg-elem);
-      min-height: 33px;
+
+  .choices__list--multiple {
+    .choices__item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0;
+      padding: 6px;
       border-radius: 4px;
-      width: auto;
+      box-sizing: border-box;
+      border: none;
+      background-color: var(--soft-blue);
+      font-size: 1.4rem;
     }
   }
-  .choices[data-type*=select-one]::after{
+
+  .choices[data-type*=select-multiple] .choices__button,
+  .choices[data-type*=text] .choices__button {
+    border: none;
+    margin: 0;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: var(--light);
+    mask-image: url(../img/icons/cross-icon.svg);
+    mask-size: contain;
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    background-image: none;
+    transition: var(--great-transition);
+    opacity: 1;
+
+    &:hover {
+      background-color: var(--red);
+    }
+  }
+}
+
+.choices {
+  width: 100%;
+  margin: 0;
+  padding-right: 4rem;
+  border-radius: 4px;
+  background-color: var(--bg-elem);
+  box-sizing: border-box;
+
+  .choices__inner {
+    display: flex;
+    gap: 4px;
+    border: unset;
+    background-color: var(--bg-elem);
+    min-height: 33px;
+    width: auto;
+  }
+
+  .choices__list--single {
+    .choices__item {
+      position: relative;
+      width: 99.9%;
+      position: relative;
+      top: 2px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  .choices__list--multiple {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    
+  }
+
+  .choices__input {
+    margin: 0;
+  }
+
+  .choices__list--dropdown,
+  .choices__list[aria-expanded] {
+    border: 1px solid var(--grey);
+    box-sizing: border-box;
+    z-index: 30;
+  }
+
+  .choices__list--dropdown .choices__item--selectable.is-highlighted,
+  .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+    background-color: var(--bg-elem);
+  }
+  .choices__list--dropdown .choices__item--selectable,
+  .choices__list[aria-expanded] .choices__item--selectable {
+    padding-right: 10px;
+  }
+  .choices__input {
+    background-color: transparent;
+  }
+}
+
+.choices[data-type*=select-one] {
+  &::after {
     content: '';
     border: unset;
-    background-image: url('../img/icons/icon-choices.svg');
+    margin: 0;
+    mask-image: url('../img/icons/icon-choices.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    background-color: var(--grey);
     width: 16px;
     height: 16px;
     display: block;
-    top: calc(50% - 8px);
+    top: 50%;
     right: 16px;
     transition: all ease .3s;
+    transform: translateY(-50%) scale(1);
+    ;
+    transform-origin: center center;
+    transition: var(--great-transition);
+
   }
-  .choices[data-type*=select-one].is-open::after{
-   margin-top: -2.5px;
-   border-color: unset;
-   transform: rotate(-180deg);
+
+  &:hover {
+    &::after {
+      background-color: var(--soft-blue);
+    }
   }
-  
+}
+
+.choices[data-type*=select-one].is-open::after {
+  margin-top: -2.5px;
+  border-color: unset;
+  transform: translateY(-50%) scale(-1);
+}
+
+
+
+
+// =========================================
+@media screen and (max-width: 640px) { 
+
+
+
+}

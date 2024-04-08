@@ -7,8 +7,11 @@
     background-color: var(--light);
     box-sizing: border-box;
     .step-form__header{ 
+      .form-message{
+        margin: 1.6rem 0;
+      }
       .decor-line{
-        margin-top: 2.4rem;
+        // margin-top: 2.4rem;
       }
       p {
         margin: 1rem 0;
@@ -38,9 +41,26 @@
       display: flex;
       flex-direction: column;
       gap: 2.4rem;
+      min-width: 0;
       border: 0;
       padding: 0;
       margin: 0;
+    }
+    .fieldset__caption{
+      position: relative;
+      top: 0px;
+      display: flex; 
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 1.6rem;
+      line-height: 1.24;
+      color: var(--black);
+      font-family: var(--title-font);
+      a{ 
+        font-size: 1.4rem;
+        color: var(--main-blue);
+      }
     }
     legend{
       position: relative;
@@ -79,6 +99,17 @@
     color: var(--light);
     font-family: var(--title-font);
     font-weight: 600; 
+  }
+  .step-form__footer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    p{
+      font-size: 1.3rem;
+      line-height: 1.17;
+      color: var(--dark-grey);
+      text-align: center;
+    }
   }
 }
 

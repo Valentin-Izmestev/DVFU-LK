@@ -1,0 +1,38 @@
+.checkbox-list{
+    .checkbox-list-controller{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        margin-bottom: 1.6rem;
+        font-size: 1.6rem;
+        line-height: 1.4;
+    }
+    .checkbox-list-controller__clear-btn{
+        margin-left: auto;
+        background: transparent;
+        color: var(--red);
+        font-size: inherit;
+        line-height: inherit;
+    }
+    ul{
+        display: flex;
+        gap: 4px;
+        flex-direction: column;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li{ 
+            .form-checkbox {
+                padding: 16px;
+                border-radius: 4px;
+                background-color: #F5F7FB;
+                box-sizing: border-box;
+                i{
+                    border: 2px solid var(--fort-grey);
+                    background-color: var(--light);
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+}

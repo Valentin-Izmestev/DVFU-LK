@@ -1,0 +1,46 @@
+.entrance-tests{ 
+    display: grid;
+    grid-template-columns: 76px 38px 1fr 56px;
+    grid-template-areas: "date time subject control";
+    grid-gap: 20px;
+    padding: 16px;
+    border-radius: 4px;
+    background-color: var(--bg);
+    
+    .entrance-tests__date{
+        grid-area: date;
+    }
+    .entrance-tests__time{
+        grid-area: time;
+    }
+    .entrance-tests__subject{
+        grid-area: subject;
+    }
+    .entrance-tests__control{
+        grid-area: control;
+        display: flex;
+        gap: 16px;
+    }
+}
+
+
+// ===================================================
+@media screen and (max-width: 550px){
+    .entrance-tests{
+        grid-template-columns: 76px 1fr  20px;
+        grid-template-areas: "date time  control"
+                             "subject subject control"; 
+        grid-gap: 10px;
+        .entrance-tests__control{
+            flex-direction: column;
+            .elem-btn {
+                &--edit{
+                    order: 2;
+                }
+                &--remove{
+                    order: 1;
+                }
+            }
+        }
+    }
+}

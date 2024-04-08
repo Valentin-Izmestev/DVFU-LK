@@ -5,4 +5,6 @@
 @@include('simplebar.js');
 @@include('Form-elem-file.js');
 @@include('File-uploader.js');
+@@include('ViTooltip.js');
+@@include('addMask.js');
 @@include('common-script.js');

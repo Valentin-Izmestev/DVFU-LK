@@ -168,6 +168,9 @@
             <button class="btn">Написать в чат</button>
         </div>
      </div>
+     <div class="header__shadow">
+        
+     </div>
 </header>
 	<main class="main">
 		<div class="step-section">
@@ -190,45 +193,46 @@
 						<legend>Название блока формы</legend>
 						<div class="form-elem">
 							<span class="form-elem__caption"> Загрузити фотографии </span>
-                            <div class="form-elem-file">
-								<input type="file" name="photo-multy" class="form-elem-file__input"  multiple="multiple">
-                                <div class="form-elem-file__preview-box"> 
-                                </div>
-                                <div class="form-elem-file__control-box">
-                                    <button type="button" class="form-elem-file__upload-btn">Загрузить файл</button>
-                                    <div class="dvfu-tooltip">
+							<div class="form-elem-file">
+								<input type="file" name="photo-multy" class="form-elem-file__input" multiple="multiple">
+								<div class="form-elem-file__preview-box">
+								</div>
+								<div class="form-elem-file__control-box">
+									<button type="button" class="form-elem-file__upload-btn">Загрузить файл</button>
+									<div class="dvfu-tooltip">
 										<span class="dvfu-tooltip__trigger">Подсказка</span>
 										<div class="dvfu-tooltip__body">
 											Подгрузите фотографию 3х4
 										</div>
 									</div>
-                                </div>  
-                            </div> 
+								</div>
+							</div>
 							<span class="form-elem__error-message"></span>
 						</div>
-                        <div class="form-elem">
+						<div class="form-elem">
 							<span class="form-elem__caption"> Загрузите фотографию </span>
-                            <div class="form-elem-file">
+							<div class="form-elem-file">
 								<input type="file" name="photo-pulty" class="form-elem-file__input">
-                                <div class="form-elem-file__preview-box"> 
-                                </div>
-                                <div class="form-elem-file__control-box">
-                                    <button type="button" class="form-elem-file__upload-btn">Загрузить файл</button>
-                                    <div class="dvfu-tooltip">
+								<div class="form-elem-file__preview-box">
+								</div>
+								<div class="form-elem-file__control-box">
+									<button type="button" class="form-elem-file__upload-btn">Загрузить файл</button>
+									<div class="dvfu-tooltip">
 										<span class="dvfu-tooltip__trigger">Подсказка</span>
 										<div class="dvfu-tooltip__body">
 											Подгрузите фотографию 3х4
 										</div>
 									</div>
 									<div class="form-elem-file__error-message"></div>
-                                </div>
-                            </div> 
+								</div>
+							</div>
 							<span class="form-elem__error-message">effsefsef</span>
 						</div>
+						
 						<div class="form-elem">
 							<span class="form-elem__caption">Скан-копия паспорта (для китайсой версии)<sup>*</sup></span>
-                            <div class="file-uploader-element">
-								<input type="file" name="pasport" class="file-uploader-element__input" >
+							<div class="file-uploader-element">
+								<input type="file" name="pasport" class="file-uploader-element__input">
 								<div class="file-uploader-element__control-box">
 									<button class="file-uploader-element-btn">
 										<span class="file-uploader-element-btn__upload">Загрузить файл</span>
@@ -241,14 +245,14 @@
 										</div>
 									</div>
 								</div>
-								<div class="file-uploader-element__preview-box"> 
+								<div class="file-uploader-element__preview-box">
 								</div>
-							</div> 
+							</div>
 							<span class="form-elem__error-message"></span>
 						</div>
 						<div class="form-elem">
 							<span class="form-elem__caption">Скан-копия паспорта (для китайсой версии)<sup>*</sup></span>
-                            <div class="file-uploader-element">
+							<div class="file-uploader-element">
 								<input type="file" name="pasport" class="file-uploader-element__input" multiple="multiple">
 								<div class="file-uploader-element__control-box">
 									<button class="file-uploader-element-btn">
@@ -262,14 +266,14 @@
 										</div>
 									</div>
 								</div>
-								<div class="file-uploader-element__preview-box"> 
+								<div class="file-uploader-element__preview-box">
 								</div>
-							</div> 
+							</div>
 							<span class="form-elem__error-message"></span>
 						</div>
-					</fieldset> 
-					<div class="step-form__field-box"> 
-                        
+					</fieldset>
+					<div class="step-form__field-box">
+
 					</div>
 
 					<div class="step-box__question">
@@ -284,13 +288,14 @@
 						</label>
 						<div class="decor-line"></div>
 					</div>
-					 
-					<div class="form-elem__choices">
-						<span>Выберите пол</span>
-						<select name="gender" class="select-ch select-ch--no-search">
-							<option value="мужской">Мужской</option>
-							<option value="женский">Женский</option>
-						</select>
+
+					<div class="form-elem">
+						<span>Нуждаетесь ли Вы в общежитии</span>
+						<label class="form-checkbox">
+							<input type="checkbox" name="check1" value="value-1">
+							<i></i>
+							<span class="form-checkbox__caption">Да, нуждаюсь</span>
+						</label>
 					</div>
 					<div class="step-form__footer">
 						<button class="btn btn--next">

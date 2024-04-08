@@ -1,6 +1,7 @@
  @import 'fonts';
  @import 'global'; 
  @import 'typography';  
+ @import 'help-class'; 
  @import 'carcass'; 
 
  @import './plagins/flatpickr'; 
@@ -18,13 +19,32 @@
  @import './components/for-forms/file-uploader-element';
  @import './components/for-forms/form-alert';
  @import './components/for-forms/form-alert-attantion';
+ @import './components/for-forms/checkbox-container';
+ @import './components/for-forms/form-radio';
+ @import './components/for-forms/form-radio-container';
+ @import './components/for-forms/form-message';
+ @import './components/for-forms/result-list-box';
+ @import './components/for-forms/result-use';
+ @import './components/for-forms/benefits';
+ @import './components/for-forms/priority';
+ @import './components/for-forms/important-element';
+ @import './components/for-forms/competition-group';
+ @import './components/for-forms/admission-parameter';
+ @import './components/for-forms/priority-of-the-competition'; 
+ @import './components/for-forms/entrance-tests';
+ @import './components/for-forms/checkbox-list';
+ @import './components/for-forms/download-flie-item';
 
 
  @import './components/form'; 
+ @import './components/buttons'; 
  @import './components/transition-elem'; 
  @import './components/header'; 
  @import './components/elements'; 
  @import './components/dvfu-tooltip'; 
+ @import './components/columns'; 
+ @import './components/great-shadow'; 
+ @import './components/auth-reg-page'; 
 
  @import './sections/step-section'; 
 

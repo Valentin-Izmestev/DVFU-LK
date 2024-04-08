@@ -3,8 +3,8 @@ class FormElemFile {
         accept: ['.pdf', '.jpg', '.png'], //допустимые файлы
         maxSize: 5242880, //5 МБ - максисальный размер файла
         maxLongNameFile: 7, //максисальная длинна имени файла, если больше, то при выводе данных файла на страницу, название будет обрезаться тремя точками.
-        maxSizeErrorMessage: 'Максимальный размер загружаемого файла 5МБ', 
-        acceptErrorMessage: 'Недопустимое расширение файла'
+        maxSizeErrorMessage: 'Максимальный размер загружаемого файла 5МБ', //сообщение, если размер файла больше указанного
+        acceptErrorMessage: 'Недопустимое расширение файла' //сообщение, если не подходит расширение файла
     }){
         this.elem = elem;
         this.uploadBtn = this.elem.querySelector('.form-elem-file__upload-btn');

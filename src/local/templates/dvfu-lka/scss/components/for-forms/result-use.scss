@@ -1,0 +1,65 @@
+
+.result-use{
+    display: grid;
+    grid-gap: 2rem;
+    padding: 1.6rem;
+    grid-template-columns: 4rem 1fr 10rem 5.6rem;
+    grid-template-areas: 'year subject balls control';
+    border-radius: 4px;
+    font-size: 1.5rem;
+    background-color: var(--bg);
+    box-sizing: border-box;
+    .result-use__year{
+        grid-area: year;
+    }
+    .result-use__subject{
+        grid-area: subject;
+    }
+    .result-use__balls{
+        grid-area: balls;
+    }
+    .result-use__control{
+        grid-area: control;
+        display: flex;
+        gap: 1.6rem;
+    }
+    .result-use__btn{
+        width: 2rem;
+        height: 2rem;
+        background-color: var(--grey);
+        mask-size: contain;
+        mask-position: center center;
+        mask-repeat: no-repeat;
+        font-size: 0;
+        transition: var(--great-transition);
+        &--edit{
+            mask-image: url(../img/icons/edit-icon.svg);
+            &:hover{
+                background-color: var(--main-blue);
+            }
+        }
+        &--remove{
+            mask-size: 90% 90%;
+            mask-image: url(../img/icons/cross-icon.svg);
+            &:hover{
+                background-color: var(--red);
+            }
+        }
+    } 
+} 
+
+// ====================================================
+@media screen and (max-width: 550px){
+    .result-use{ 
+        grid-gap: 2px; 
+        grid-template-columns: 1fr 2rem;
+        grid-template-areas: 'year control'
+                             'subject control'
+                             'balls control';  
+
+        .result-use__control{
+            flex-direction: column-reverse;
+            justify-content: space-between;
+        }
+    }
+}

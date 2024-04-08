@@ -3562,8 +3562,8 @@ class FormElemFile {
         accept: ['.pdf', '.jpg', '.png'], //допустимые файлы
         maxSize: 5242880, //5 МБ - максисальный размер файла
         maxLongNameFile: 7, //максисальная длинна имени файла, если больше, то при выводе данных файла на страницу, название будет обрезаться тремя точками.
-        maxSizeErrorMessage: 'Максимальный размер загружаемого файла 5МБ', 
-        acceptErrorMessage: 'Недопустимое расширение файла'
+        maxSizeErrorMessage: 'Максимальный размер загружаемого файла 5МБ', //сообщение, если размер файла больше указанного
+        acceptErrorMessage: 'Недопустимое расширение файла' //сообщение, если не подходит расширение файла
     }){
         this.elem = elem;
         this.uploadBtn = this.elem.querySelector('.form-elem-file__upload-btn');
@@ -3982,6 +3982,123 @@ class FileUploader {
     }
 }
  ;
+class ViTooltip{
+    constructor(elem){
+        this.elem  = elem;
+        this.trigger = this.elem.querySelector('.dvfu-tooltip__trigger');
+        this.body = this.elem.querySelector('.dvfu-tooltip__body');
+        this.winWidth = 0;
+        this.winHeight = 0;
+        this.init();
+    }
+
+    init(){ 
+        this.getWinWidthAndHeigh();
+        this.addClass();
+        window.addEventListener('resize', ()=>{ 
+            this.getWinWidthAndHeigh();
+            this.addClass();
+        });
+        window.addEventListener('scroll', ()=>{ 
+            this.getWinWidthAndHeigh();
+            this.addClass();
+        });
+
+        this.trigger.addEventListener('mouseover', ()=>{
+            this.addClass();
+        });
+
+    }
+
+    getWinWidthAndHeigh(){ 
+        this.winWidth = document.documentElement.clientWidth;
+        this.winHeight = document.documentElement.clientHeight;   
+    }
+    addClass(){
+        this.body.classList.remove('dvfu-tooltip__body--left');
+        this.body.classList.remove('dvfu-tooltip__body--right');
+        this.body.classList.remove('dvfu-tooltip__body--top');
+        
+        let gbcr = this.body.getBoundingClientRect();
+        if(gbcr.x < 0){
+            this.body.classList.add('dvfu-tooltip__body--left');
+        }
+        if(gbcr.x + gbcr.width > this.winWidth){
+            this.body.classList.add('dvfu-tooltip__body--right');
+        }  
+        if(gbcr.y + gbcr.height > this.winHeight){
+            this.body.classList.add('dvfu-tooltip__body--top');
+        }
+    }
+};
+// подключаем маски телефона
+let nlTelMask = document.querySelectorAll('.tel-mask');
+if(nlTelMask.length > 0){
+    nlTelMask.forEach(nodeTel=>{
+        let mask = IMask(nodeTel, { 
+            mask: '+{7} (000) 000-00-00',  
+        });
+    });
+    
+};
+// маска номера чего то
+let nlNumMask = document.querySelectorAll('.num-mask');
+if(nlNumMask.length > 0) {
+    nlNumMask.forEach(nodeNum=>{
+        let mask = IMask(nodeNum, {
+            mask: '000-000'
+        });
+    });
+};
+
+
+// маска номера СНИЛС
+let nlNumSnilsMask = document.querySelectorAll('.num-mask-snils');
+if(nlNumSnilsMask.length > 0) {
+    nlNumSnilsMask.forEach(nodeSnils=>{
+        let mask = IMask(nodeSnils, {
+            mask: '000-000-000-00', 
+        });
+    });
+};
+
+// маска серии паспорта
+let nlNumSeriesMask = document.querySelectorAll('.num-mask-series');
+if(nlNumSeriesMask.length > 0) {
+    nlNumSeriesMask.forEach(nodeSnils=>{
+        let mask = IMask(nodeSnils, {
+            mask: '0000',
+        });
+    });
+};
+
+// маска номера паспорта
+let nlNumPassMask = document.querySelectorAll('.num-mask-pass');
+if(nlNumPassMask.length > 0) {
+    nlNumPassMask.forEach(nodeSnils=>{
+        let mask = IMask(nodeSnils, {
+            mask: '000000',
+        });
+    });
+};
+// Подключение маски года
+let nlYearMask = document.querySelectorAll('.year-mask');
+if(nlYearMask.length > 0) {
+    nlYearMask.forEach(item=>{
+        let mask = IMask(item, {
+            mask: '0000'
+        });
+    });
+};
+// Подключение маски года
+let nlEstimationMask = document.querySelectorAll('.estimation-mask');
+if(nlEstimationMask.length > 0) {
+    nlEstimationMask.forEach(item=>{
+        let mask = IMask(item, {
+            mask: '00'
+        });
+    });
+};;
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function(){
@@ -3998,11 +4115,11 @@ document.addEventListener('DOMContentLoaded', function(){
             });
         }
  
-        window.addEventListener('resize', function(){
-            if(window.innerWidth <= 1100){
-                document.body.classList.add('expland-menu');
-            } 
-        });
+        // window.addEventListener('resize', function(){
+        //     if(window.innerWidth <= 1100){
+        //         document.body.classList.add('expland-menu');
+        //     } 
+        // });
 
         let burgerBtn = document.querySelector('.burger-btn');
         if(burgerBtn){
@@ -4016,7 +4133,13 @@ document.addEventListener('DOMContentLoaded', function(){
         let arFef = [];
         if(nlFormElemFiles.length > 0){
             nlFormElemFiles.forEach(item=>{
-                let fef = new FormElemFile(item);
+                let fef = new FormElemFile(item, {
+                    accept: ['.pdf', '.jpg', '.png'],
+                    maxSize: 5242880, 
+                    maxLongNameFile: 7, 
+                    maxSizeErrorMessage: 'Максимальный размер загружаемого файла 5МБ',
+                    acceptErrorMessage: 'Недопустимое расширение файла'
+                });
                 arFef.push(fef);
             }); 
         }
@@ -4039,62 +4162,31 @@ document.addEventListener('DOMContentLoaded', function(){
             });
         }
         
+        let nlDvfuTooltip = document.querySelectorAll('.dvfu-tooltip');
+        let arrTooltip = [];
+        if(nlDvfuTooltip.length > 0){
+            nlDvfuTooltip.forEach(tooltip => {
+                let tp = new ViTooltip(tooltip);
+            });
+        }
+
+        // автовысота textarea
+        var nlTextarea = document.querySelectorAll('.form-elem__textarea-autoheigth');
+        if(nlTextarea.length > 0){
+            nlTextarea.forEach(tx=>{
+                tx.setAttribute('style', 'height:'+ (tx.scrollHeight) +'px;overflow-y:hidden;');
+                tx.addEventListener("input", OnInput, false);
+            });
+        }
+
+        function OnInput() {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+        }
+        
 });
 
 ;
-// подключаем маски
-let nlTelMask = document.querySelectorAll('.tel-mask');
-if(nlTelMask.length > 0){
-    nlTelMask.forEach(nodeTel=>{
-        let mask = IMask(nodeTel, { 
-            mask: '+{7} (000) 000-00-00', 
-            // lazy: false,
-            // placeholderChar: '__'
-        });
-    });
-    
-};
-// маска номера 
-let nlNumMask = document.querySelectorAll('.num-mask');
-if(nlNumMask.length > 0) {
-    nlNumMask.forEach(nodeNum=>{
-        let mask = IMask(nodeNum, {
-            mask: '000-000'
-        })
-    })
-};
-
-// маска номера СНИЛС
-let nlNumSnilsMask = document.querySelectorAll('.num-mask-snils');
-if(nlNumSnilsMask.length > 0) {
-    nlNumSnilsMask.forEach(nodeSnils=>{
-        let mask = IMask(nodeSnils, {
-            mask: '000-000-000-00',
-            lazy: false,
-            placeholderChar: '__'
-        })
-    })
-};
-
-// маска серии паспорта
-let nlNumSeriesMask = document.querySelectorAll('.num-mask-series');
-if(nlNumSeriesMask.length > 0) {
-    nlNumSeriesMask.forEach(nodeSnils=>{
-        let mask = IMask(nodeSnils, {
-            mask: '0000',
-        })
-    })
-};
-
-// маска номера паспорта
-let nlNumPassMask = document.querySelectorAll('.num-mask-pass');
-if(nlNumPassMask.length > 0) {
-    nlNumPassMask.forEach(nodeSnils=>{
-        let mask = IMask(nodeSnils, {
-            mask: '000000',
-        })
-    })
-};
 
  
 // подключаем flatpickr для календаря
@@ -4113,35 +4205,75 @@ let nlNpaChoices = document.querySelectorAll('.select-ch');
     let arNpaChoices = [];
     if(nlNpaChoices.length > 0){
         nlNpaChoices.forEach(item=>{
-            if(item.classList.contains('select-ch--no-search')){
-                let choicesItem = new Choices(item, {
-                    searchEnabled: false,
-                    searchChoices: false,
-                    placeholderValue: null,
-                    placeholder: true,
-                    removeItemButton: false,
-                    itemSelectText: '',
-                    loadingText: 'Загрузка...',
-                    noResultsText: 'Результатов не найдено',
-                    noChoicesText: 'Выбирать больше нечего',
-                    classNames: {
-                        containerOuter: 'choices choices-npa',
-                    }
-                });
+            let choicesItem = {};
+            if(item.classList.contains('select-ch--no-search')){ 
+                if(item.getAttribute('multiple')){
+                    choicesItem = new Choices(item, {
+                        searchEnabled: false,
+                        searchChoices: false,
+                        placeholderValue: null,
+                        placeholder: true,
+                        removeItemButton: false,
+                        itemSelectText: '',
+                        loadingText: 'Загрузка...',
+                        noResultsText: 'Результатов не найдено',
+                        noChoicesText: 'Выбирать больше нечего',
+                        shouldSort: false,
+                        position: 'auto',
+                        allowHTML: true,
+                        removeItemButton: true, 
+                    });
+                }else{
+                     choicesItem = new Choices(item, {
+                        searchEnabled: false,
+                        searchChoices: false,
+                        placeholderValue: null,
+                        placeholder: true,
+                        removeItemButton: false,
+                        itemSelectText: '',
+                        loadingText: 'Загрузка...',
+                        noResultsText: 'Результатов не найдено',
+                        noChoicesText: 'Выбирать больше нечего',
+                        shouldSort: false,
+                        position: 'auto',
+                        allowHTML: true, 
+                    });
+                }
+                
                 arNpaChoices.push(choicesItem);
             }else{
-                let choicesItem = new Choices(item, {
-                    placeholderValue: null,
-                    placeholder: true,
-                    removeItemButton: false,
-                    loadingText: 'Загрузка...',
-                    itemSelectText: '',
-                    noResultsText: 'Результатов не найдено',
-                    noChoicesText: 'Выбирать больше нечего',
-                    classNames: {
-                        containerOuter: 'choices choices-dvfu',
-                    }
-                });
+                if(item.getAttribute('multiple')){
+                    choicesItem = new Choices(item, {
+                        placeholderValue: null,
+                        placeholder: true,
+                        removeItemButton: false,
+                        loadingText: 'Загрузка...',
+                        itemSelectText: '',
+                        noResultsText: 'Результатов не найдено',
+                        noChoicesText: 'Выбирать больше нечего',
+                        shouldSort: false,
+                        position: 'auto',
+                        allowHTML: true,
+                        removeItemButton: true,
+                        classNames: {
+                            containerOuter: 'choices choices-dvfu',
+                        }
+                    });
+                }else{
+                    choicesItem = new Choices(item, {
+                        placeholderValue: null,
+                        placeholder: true,
+                        removeItemButton: false,
+                        loadingText: 'Загрузка...',
+                        itemSelectText: '',
+                        noResultsText: 'Результатов не найдено',
+                        noChoicesText: 'Выбирать больше нечего',
+                        shouldSort: false,
+                        position: 'auto',
+                        allowHTML: true, 
+                    });
+                }
+                
                 arNpaChoices.push(choicesItem);
             }
         });
